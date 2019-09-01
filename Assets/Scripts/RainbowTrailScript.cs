@@ -7,8 +7,7 @@ public class RainbowTrailScript : MonoBehaviour
     private TrailRenderer _rainbowTrail;
     private float _colorSwitchTime = 0.5f;
     private float _widthSwitchTime = 0.05f;
-    private Color[] _colors = new Color[7]
-    {
+    private Color[] _colors = {
         new Color(255, 0, 0),
         new Color(255, 127, 0),
         new Color(255, 255, 0),
