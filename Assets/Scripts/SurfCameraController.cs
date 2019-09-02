@@ -12,8 +12,15 @@ public class SurfCameraController : MonoBehaviour
         OffsetX = new Vector3(transform.position.x - RainbowSurfer.transform.position.x, 0, -1);
     }
 
+    private void FixedUpdate()
+    {
+        transform.position = new Vector3(RainbowSurfer.transform.position.x + OffsetX.x, RainbowSurfer.transform.position.y, transform.position.z);
+    }
+
     private void LateUpdate()
     {
-        transform.position = new Vector3(RainbowSurfer.transform.position.x + OffsetX.x, transform.position.y, transform.position.z);
+        Vector3 currPosition = transform.position;
+        currPosition.y = Mathf.Clamp(currPosition.y, -6.75f, 6.75f);
+        transform.position = currPosition;
     }
 }
