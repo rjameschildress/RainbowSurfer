@@ -7,16 +7,16 @@ public class RainbowTrailScript : MonoBehaviour
     private TrailRenderer _rainbowTrail;
     private float _colorSwitchTime = 0.5f;
     private float _widthSwitchTime = 0.05f;
-    private Color[] _colors = {
-        new Color(255, 0, 0),
-        new Color(255, 127, 0),
-        new Color(255, 255, 0),
-        new Color(0, 255, 0),
-        new Color(0, 0, 255),
-        new Color(75, 0, 130),
-        new Color(148, 0, 211)
-    };
-    private int _colorIterator;
+	private Color32[] _colors = {
+		new Color32(255, 0, 0, 255),
+		new Color32(255, 127, 0, 255),
+		new Color32(255, 255, 0, 255),
+		new Color32(0, 255, 0, 255),
+		new Color32(0, 0, 255, 255),
+		new Color32(75, 0, 130, 255),
+		new Color32(148, 0, 211, 255)
+	};
+	private int _colorIterator;
     private float _trailStartWidth;
     private float _trailEndWidth;
     private bool _decreaseWidth;
