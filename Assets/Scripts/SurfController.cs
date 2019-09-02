@@ -28,7 +28,7 @@ public class SurfController : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 currPosition = transform.position;
-        currPosition.y = Mathf.Clamp(currPosition.y, -ScreenBoundary.y + HalfSurferHeight, ScreenBoundary.y - HalfSurferHeight);
+        currPosition.y = Mathf.Clamp(currPosition.y, -8f + HalfSurferHeight, 8f - HalfSurferHeight);
         transform.position = currPosition;
     }
 }
