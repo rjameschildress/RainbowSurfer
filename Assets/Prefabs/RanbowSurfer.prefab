@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4355485432372565935}
   - component: {fileID: 4228798447426265054}
   - component: {fileID: 6957969683900179027}
+  - component: {fileID: 7179872890794794066}
   m_Layer: 0
   m_Name: RanbowSurfer
   m_TagString: Untagged
@@ -71,6 +72,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7179872890794794066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472245630758591255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4dceb6dcafc4d00a32ef9b40c6c779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Projectile: {fileID: 7009290214405902954, guid: 4096b479f2c4f42358a35ea8826cafc1,
+    type: 3}
 --- !u!1 &5482843542877242257
 GameObject:
   m_ObjectHideFlags: 0
