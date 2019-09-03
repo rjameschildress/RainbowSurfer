@@ -20,7 +20,7 @@ public class SurfCameraController : MonoBehaviour
     private void LateUpdate()
     {
         Vector3 currPosition = transform.position;
-        currPosition.y = Mathf.Clamp(currPosition.y, -6.75f, 6.75f);
+        currPosition.y = Mathf.Clamp(currPosition.y, -6f, 6f);
         transform.position = currPosition;
     }
 }

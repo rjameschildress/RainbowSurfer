@@ -29,7 +29,7 @@ public class RSProjectileController : MonoBehaviour
         _spriteRenderer.color = _colors[_colorIterator];
         InvokeRepeating("ChangeColor", 0.1f, _colorSwitchTime);
         _rb.velocity = _speed;
-        _destroyPosX = transform.position.x + 40f;
+        _destroyPosX = transform.position.x + 60f;
     }
 
     private void ChangeColor()
