@@ -263,6 +263,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1189504088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1189504090}
+  - component: {fileID: 1189504089}
+  m_Layer: 0
+  m_Name: SpaceRockHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1189504089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189504088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3377bee0c5ca94f91a6a34b3c7f125, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1454201679}
+  SpaceRockSpawner: {fileID: 8447920064218135935, guid: b8ee2d349dc36854e91036d7d9bec197,
+    type: 3}
+--- !u!4 &1189504090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189504088}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1454201679 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 472245630758591255, guid: 9844efae445f84de196c16a48d739669,
@@ -279,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 472245630758591255, guid: 9844efae445f84de196c16a48d739669,
         type: 3}
       propertyPath: m_Name
-      value: RanbowSurfer
+      value: RainbowSurfer
       objectReference: {fileID: 0}
     - target: {fileID: 4355485432372565935, guid: 9844efae445f84de196c16a48d739669,
         type: 3}
@@ -305,6 +351,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355485432372565935, guid: 9844efae445f84de196c16a48d739669,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4228798447426265054, guid: 9844efae445f84de196c16a48d739669,
         type: 3}
