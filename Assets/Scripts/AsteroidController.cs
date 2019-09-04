@@ -22,4 +22,12 @@ public class AsteroidController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
