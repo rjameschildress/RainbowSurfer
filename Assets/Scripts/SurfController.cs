@@ -15,6 +15,7 @@ public class SurfController : MonoBehaviour
     {
         ScreenBoundary = SurfCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, SurfCamera.transform.position.z));
         HalfSurferHeight = transform.GetComponentInChildren<SpriteRenderer>().bounds.size.y / 2.0f;
+        transform.position = new Vector3(SurfCamera.transform.position.x - 4f, 0f, 0f);
     }
 
     private void FixedUpdate()
