@@ -23,16 +23,37 @@ public class SpaceRockHolder : MonoBehaviour
             GameObject currSpawner = Instantiate(SpaceRockSpawner, spawnPos, Quaternion.identity, transform);
             _spaceRockSpawners.Add(currSpawner.GetComponent<SpaceRockSpawner>());
         }
+        InvokeRepeating("FireARock", 1.5f, 1f);
         InvokeRepeating("FireARock", 2f, 1f);
         InvokeRepeating("FireARock", 2.5f, 1f);
         InvokeRepeating("FireARock", 3f, 1f);
         InvokeRepeating("FireARock", 3.5f, 1f);
+        InvokeRepeating("FireARock", 4f, 1f);
     }
 
     private void FireARock()
     {
         int selected = Random.Range(0, _numOfSpawners);
-        _spaceRockSpawners[selected].Fire = true;
+        if (_spaceRockSpawners[selected].Firing == false)
+        {
+            _spaceRockSpawners[selected].Fire = true;
+        }
+        else if (selected == 0 || selected == _numOfSpawners - 1)
+        {
+            Debug.Log($"Couldn't fire rock at edge: {selected}");
+        }
+        else if (_spaceRockSpawners[selected + 1].Firing == false)
+        {
+            _spaceRockSpawners[selected + 1].Fire = true;
+        }
+        else if (_spaceRockSpawners[selected - 1].Firing == false)
+        {
+            _spaceRockSpawners[selected - 1].Fire = true;
+        }
+        else
+        {
+            Debug.Log("Unable to fire a rock");
+        }
     }
 
     private void FixedUpdate()

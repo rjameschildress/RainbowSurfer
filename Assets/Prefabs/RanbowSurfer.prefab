@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6957969683900179027}
   - component: {fileID: 7179872890794794066}
   - component: {fileID: 22845686131625766}
+  - component: {fileID: 561275484952521159}
   m_Layer: 0
   m_Name: RanbowSurfer
   m_TagString: Player
@@ -113,6 +114,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.21142042, y: 0.47887558}
   m_EdgeRadius: 0
+--- !u!114 &561275484952521159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472245630758591255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a53a44437c60d554585f19dfc1a7afce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5482843542877242257
 GameObject:
   m_ObjectHideFlags: 0
