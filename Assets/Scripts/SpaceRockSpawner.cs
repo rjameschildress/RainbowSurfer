@@ -7,14 +7,14 @@ public class SpaceRockSpawner : MonoBehaviour
     public GameObject Player;
     public GameObject SpaceRock;
     public bool Fire = false;
-    private bool _firing = false;
+    public bool Firing = false;
     
     // Update is called once per frame
     void Update()
     {
-        if (Fire && !_firing)
+        if (Fire && !Firing)
         {
-            _firing = true;
+            Firing = true;
             StartCoroutine(FireRock());
         }
     }
@@ -23,7 +23,7 @@ public class SpaceRockSpawner : MonoBehaviour
     {
         Instantiate(SpaceRock, transform.position, Quaternion.identity);
         yield return new WaitForSecondsRealtime(2f);
-        _firing = false;
+        Firing = false;
         Fire = false;
     }
 }

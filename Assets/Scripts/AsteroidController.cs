@@ -28,6 +28,7 @@ public class AsteroidController : MonoBehaviour
         if (collision.gameObject.tag.Equals("Player"))
         {
             Destroy(gameObject);
+            collision.gameObject.GetComponent<PlayerController>().TakeDamage(1);
         }
     }
 }
