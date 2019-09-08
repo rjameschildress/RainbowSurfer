@@ -6,6 +6,7 @@ public class SpaceRockHolder : MonoBehaviour
 {
     public GameObject Player;
     public GameObject SpaceRockSpawner;
+    public bool ShouldFire;
     private float _offsetX;
     private List<SpaceRockSpawner> _spaceRockSpawners = new List<SpaceRockSpawner>();
     private float _playerHeight;
@@ -14,6 +15,7 @@ public class SpaceRockHolder : MonoBehaviour
 
     private void Start()
     {
+        ShouldFire = true;
         _offsetX = transform.position.x - Player.transform.position.x;
         _playerHeight = Player.transform.GetComponentInChildren<SpriteRenderer>().bounds.size.y;
         _numOfSpawners = (int)(_backgroundHeight / _playerHeight);
@@ -33,6 +35,11 @@ public class SpaceRockHolder : MonoBehaviour
 
     private void FireARock()
     {
+        if (!ShouldFire)
+        {
+            return;
+        }
+
         int selected = Random.Range(0, _numOfSpawners);
         if (_spaceRockSpawners[selected].Firing == false)
         {
