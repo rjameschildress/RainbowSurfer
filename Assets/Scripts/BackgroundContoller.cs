@@ -18,6 +18,8 @@ public class BackgroundContoller : MonoBehaviour
         spawnPos.x += _distanceX;
         _backgrounds.Add(Instantiate(Background, spawnPos, Quaternion.identity, transform));
         spawnPos.x += _distanceX;
+        _backgrounds.Add(Instantiate(Background, spawnPos, Quaternion.identity, transform));
+        spawnPos.x += _distanceX;
     }
 
     // Update is called once per frame
